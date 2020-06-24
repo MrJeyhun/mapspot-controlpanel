@@ -1,0 +1,43 @@
+// @import '~@kbfront/kb-ui/scss/utils.scss';
+
+// .kb-select_wrapper {
+//     .kb-select_box {
+//         @include el($h: toRem(48px), $radius: toRem(2px), $b: 1px solid $solitude);
+//         &.disabled {
+//             opacity: 1;
+//             @include el($bgColor: #f9fafb);
+//         }
+//         .kb-select_label {
+//             @include el($p: 0px);
+//         }
+//         &:hover {
+//             @include el($bgColor: #f9fafb);
+//         }
+//         span {
+//             i {
+//                 &::before {
+//                     font-family: 'Font Awesome 5 Pro';
+//                     content: '\f107';
+//                     @include text($color: #bdc3c7, $size: toRem(16px));
+//                     @include el(
+//                         $b: none !important,
+//                         $dsp: block,
+//                         $transform: rotate(0deg) !important,
+//                         $transition: all 0.2s ease-in-out
+//                     );
+
+//                     pointer-events: none;
+//                 }
+//             }
+//         }
+//     }
+//     .show {
+//         @include el($radius: toRem(1px), $overflow: hidden);
+//         ul {
+//             @include el($h: 100%);
+//             li {
+//                 @include el($p: toRem(10px));
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,7 @@
+@import 'shared/assets/styles/main.scss';
+
+.table-panel {
+    @include el($w: 100%, $h: 100%, $bg: rgb(123, 251, 119));
+    @include flex($jc: center, $ai: center);
+    @include text($font: Poppins);
+}

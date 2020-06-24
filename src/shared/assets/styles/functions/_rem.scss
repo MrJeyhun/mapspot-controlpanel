@@ -1,0 +1,12 @@
+@use 'sass:list';
+// @import '../variables';
+
+@function rem($value...) {
+    $result: ();
+
+    @each $val in $value {
+        $result: append($result, ($val / $baseSizePixel) * 1rem);
+    }
+
+    @return $result;
+}

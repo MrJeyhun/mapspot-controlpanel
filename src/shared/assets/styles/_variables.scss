@@ -1,0 +1,65 @@
+/** SIZE */
+// $headerHeight: 72px;
+// $headerBorder: 3px;
+// $mainPadding: 30px;
+// $footerHeight: 95px;
+// $pageHeaderHeight: 32px;
+// $pageHeaderMargin: 12px;
+// $mainDistance: (#{$headerHeight} + #{$headerBorder}) + #{$mainPadding} + #{$footerHeight};
+// $mainContainerDistance: #{$mainDistance} + #{$pageHeaderHeight} + (#{$pageHeaderMargin} * 2);
+
+/** FONTS */
+
+$roboto: 'Roboto', arial, helvetica, sans-serif;
+$baseSizePixel: 16px;
+
+/** COLORS */
+$white: #fff;
+$red: #ff0000;
+
+// $primaryColor: #df3a4c;
+// $secondaryColor: #f4717f;
+// $successColor: #57b894;
+// $lightGray: #ececec;
+// $white: #fff;
+// $darkGray: #2e3131;
+// $griffinGray: #586268;
+// $solitude: #e4e8ee;
+
+// BG
+// $headerBgColor: #fff;
+// $cardBgColor: #fff;
+// $bodyBgColor: #f2f2f2;
+// $contentBgColor: #fff;
+
+// TEXT
+
+// $textColor: #222;
+// $iconColor: #999;
+
+/* media */
+// $extra-small: 435px;
+// $small: 576px;
+// $medium: 768px;
+// $large: 992px;
+// $extra-large: 1200px;
+
+/* fonts */
+// $regular: 'TT_Interphases_Regular';
+// $demiBold: 'TT_Interphases_DemiBold';
+// $bold: 'TT_Interphases_Bold';
+// $light: 'TT_Interphases_Light';
+
+/* MODAL VARIABLES */
+//FIXME: BackgroundColorModal , move Modal word to end
+$modalBackgroundColor: rgba(241, 227, 227, 0.795);
+$modalContentColor: $white;
+$modalTitleBorder: rgb(243, 235, 235);
+$modalCloseBtnColor: rgb(219, 214, 214);
+$modalCloseBtnColorHover: $red;
+$modalCloseBtnBg: #f3f6f9;
+
+/* LAYOUT VARIABLES */
+$radiusLayout: rem(19px);
+$linerBackground: linear-gradient(180deg, #eae8f2 0%, #d8d6e7 100%);
+$rightSideColorLayout: #f6f5fa;

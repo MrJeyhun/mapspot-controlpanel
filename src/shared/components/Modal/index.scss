@@ -1,0 +1,62 @@
+@import 'shared/assets/styles/main.scss';
+
+.lib-modal {
+    @include flex($jc: c, $ai: c);
+    @include el($bgColor: $modalBackgroundColor, $index: 11000, $w: 100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+
+    &__content {
+        @include flex($ai: c, $dr: c, $jc: sb);
+        @include el($w: 50%, $bgColor: $modalContentColor, $h-min: 50%);
+
+        &-header {
+            @include flex($jc: sb, $ai: c);
+            @include el($w: 100%, $bb: rem(2px) solid $modalTitleBorder, $p: rem(20px));
+            box-sizing: border-box;
+            .close-btn {
+                @include el(
+                    $crs: pointer,
+                    $color: $modalCloseBtnColor,
+                    $bg: $modalCloseBtnBg,
+                    $p: 0 rem(5px) rem(2px) rem(5px),
+                    $b: none,
+                    $radius: rem(4px)
+                );
+                @include text($size: rem(18px));
+                &:hover {
+                    @include el($color: $modalCloseBtnColorHover);
+                }
+            }
+        }
+
+        &-body {
+            @include el($p: rem(20px));
+        }
+
+        &-footer {
+            @include flex($as: fe);
+        }
+    }
+
+    // &__modal {
+    //     &__s {
+    //         @include el($w: rem(350px), $h-max: rem(390px));
+    //     }
+
+    //     &__xs {
+    //         @include el($w: rem(350px), $h-max: rem(222px));
+    //     }
+    // }
+    .close-btn {
+    }
+}
+
+/* scroll disabled  */
+body.scroll-disable {
+    @include el($overflow: hidden);
+}

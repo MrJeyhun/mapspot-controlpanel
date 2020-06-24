@@ -1,0 +1,86 @@
+@import 'shared/assets/styles/main.scss';
+
+$brandShadow: 0 rem(2px) rem(1.5px) 0 rgba(26, 0, 0, 0.1);
+$brandBorder: rem(0.5px) solid rgba(237, 236, 243, 0.2);
+$sbActive: #f05542;
+$sbActiveFill: #fc7d6d;
+$sbActiveBg: #7033ff17;
+
+// $sbActive: #7033ff;
+// $sbActive: #8a59fcef;
+// $sbActiveFill: #5e27f594;
+
+.sidebar {
+    a {
+        width: 100%;
+    }
+    @include el($w: 100%, $br: rem(1.5px) solid $rightSideColorLayout);
+    @include flex($dr: c, $jc: sb);
+    @include text($font: Poppins);
+    user-select: none;
+
+    &__column {
+        @include flex($dr: c, $jc: sb);
+        @include el($h: 100%);
+    }
+    &__icon-group {
+        @include flex($dr: c, $jc: sb, $ai: c);
+
+        // padding-bottom: rem(30px);
+        // prettier-ignore
+        .brand {
+            @include flex($dr: c, $jc: c, $ai: c);
+            @include el($w: rem(50px), $h: rem(50px), $b: $brandBorder, $radius: 35%, $shadow: $brandShadow, $mb: rem(25px));
+            @include text($size: rem(18px), $weight: 500, $color: #ff4806);
+        }
+
+        .icon {
+            @include flex($dr: c, $jc: c, $ai: c);
+            @include el($h: rem(70px));
+            &:hover {
+                // background: rgba(238, 21, 21, 0.055);
+                background: $sbActiveBg;
+                svg {
+                    // fill: rgba(238, 21, 21, 0.637);
+                    fill: $sbActiveFill;
+                }
+            }
+        }
+
+        .active {
+            // border-right: rem(2px) solid $sbActive;
+            // margin-right: rem(-3px);
+            box-shadow: rem(3px) 0px 0px rem(-1px) rgba(240, 85, 66, 1);
+
+            svg,
+            svg:hover {
+                fill: $sbActive !important;
+            }
+        }
+        svg {
+            fill: #b7b3cc;
+        }
+    }
+    &__icon-group.ig-4x {
+        height: 75%;
+    }
+
+    &__icon-group.ig-3x {
+        height: 50%;
+    }
+
+    &__profile {
+        @include flex($dr: c, $jc: c, $ai: c);
+        .outline {
+            border: rem(0.5px) solid #edecf3;
+            padding: rem(2px);
+            border-radius: rem(10px);
+        }
+
+        .image {
+            width: rem(45px);
+            height: rem(45px);
+            border-radius: rem(10px);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+// @import "~@kbfront/kb-ui/scss/utils.scss";
+
+// .kb-form-control {
+//     .input-block {
+//         input {
+//             @include el(
+//                 $b: 1px solid $solitude,
+//                 $radius: toRem(2px),
+//                 $p: toRem(12px, 16px),
+//                 $bgColor: $white,
+//                 $outln: none
+//             );
+//             @include text($size: toRem(14px), $color: $darkGray);
+
+//             &::placeholder {
+//                 @include text($size: toRem(16px));
+//                 @include el($color: #acb3b8, $transition: .125s);
+//             }
+//             &:focus::placeholder {
+//                 @include text($color: transparent);
+//             }
+//         }
+//         i {
+//             @include text($size: toRem(16px));
+//         }
+//     }
+// }

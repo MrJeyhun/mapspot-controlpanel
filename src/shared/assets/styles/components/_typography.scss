@@ -1,0 +1,30 @@
+// @import '~@kbfront/kb-ui/scss/utils.scss';
+
+// @for $i from 1 through 6 {
+//     .kb-heading-#{$i} {
+//         &.default {
+//             @include text($color: $darkGray);
+//         }
+//         &.info {
+//             @include text($color: white);
+//         }
+//         &.red100 {
+//             @include text($color: $primaryColor);
+//         }
+//     }
+// }
+// .demiBold__header {
+//     @include text($size: toRem(24px), $weight: 500, $lnHeight: toRem(52px), $font: $demiBold, $color: $darkGray);
+// }
+
+// .light__header {
+//     @include text($font: $light, $size: toRem(20px), $lnHeight: toRem(32px), $color: $darkGray, $align: center);
+// }
+
+// .p-14 {
+//     @include text($size: toRem(14px), $lnHeight: toRem(24px), $font: $regular, $align: center);
+// }
+
+// .p-12 {
+//     @include text($size: toRem(12px), $lnHeight: toRem(16px), $font: $regular, $align: center);
+// }

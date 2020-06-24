@@ -1,0 +1,73 @@
+.grid-table {
+    background: #d5d6d836; // color of artificial borders
+    color: #686464; // color of texts of body rows except buttons
+    font-family: Poppins, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.grid-table .row {
+    margin: 0.6px; // border like margin (0.3px default)
+    background: #fff; // color of rows, background is gray, so margins look like borders
+    border-radius: 3px; // background color prevent border to be fully visible
+    cursor: pointer;
+
+    &:first-child {
+        background: #fff; // change background to transparent if body is not #fff
+        letter-spacing: 1px;
+        background: #f5ec43;
+        font-family: monospace, Arial;
+        font-weight: bold;
+        cursor: default;
+    }
+    &:not(:first-child):hover {
+        font-weight: 500;
+        background: #aa663e11;
+        button {
+            font-weight: 500;
+        }
+    }
+}
+
+//**MEDIAS**/
+@media (max-width: 800px) {
+    .grid-table {
+        background: transparent; // gap between tables
+        grid-row-gap: 2rem; // gap between individual tables
+        box-shadow: none; // remove shadow from div, give shadow to individual tables instead
+        .cell {
+            font-size: 1.6rem; // increase headers size
+            padding: 0 0 0.96rem 0 !important;
+            text-align: center;
+            //headers
+            &:before {
+                background: #f5ec43;
+                color: #878113;
+                padding: 0.75rem;
+                margin-bottom: 0.75rem;
+                font-size: 1.6rem; // increase headers size
+                letter-spacing: 1px; // headers are hidden, so letter spacing is needed here too
+                font-weight: bold;
+                letter-spacing: 1px; // headers are hidden, so letter spacing is needed here too
+            }
+            // first header/cell
+            &:first-child {
+                &:before {
+                    border-radius: 0.5rem 0.5rem 0 0; // individual table , first header/cell
+                }
+            }
+        }
+
+        .row {
+            background: rgba(100, 184, 253, 0.445);
+            &:first-child {
+                display: none; //hide headers - first row. will be using :before content as headers
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .grid-table .cell {
+        background: rgba(255, 0, 0, 0.171);
+    }
+}

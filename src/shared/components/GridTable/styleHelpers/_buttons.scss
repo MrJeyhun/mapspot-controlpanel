@@ -1,0 +1,34 @@
+button {
+    //TODO: after reset.css some values should be deleted
+    font-family: Poppins;
+    font-style: normal; // ??
+    border-radius: 0.42rem;
+    padding: 3px 3px;
+    text-decoration: none;
+    border-radius: 0.42rem;
+    height: 24px;
+    line-height: 1.5;
+    padding: 0.15rem 0.75rem;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: pointer; //TODO: add this to lib
+}
+
+.approved {
+    background-color: #e1f0ff;
+    color: #3699ff;
+}
+.progress {
+    background-color: #fff4de;
+    color: #ffa800;
+}
+
+.delete {
+    background-color: #ffe2e5;
+    color: #f64e60;
+}
+.done {
+    background: #d5d6d836;
+    color: #686464;
+}

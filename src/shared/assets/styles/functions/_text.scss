@@ -1,0 +1,40 @@
+// @import './variables', '../../functions/toRem', '../cross/select';
+
+@mixin text(
+    $align: null,
+    $transform: null,
+    $decoration: null,
+    $justify: null,
+    $overflow: null,
+    $indent: null,
+    $shadow: null,
+    $color: null,
+    $size: null,
+    $font: null,
+    $style: null,
+    $weight: null,
+    $lnHeight: null,
+    $lnSpacing: null,
+    $whSpace: null,
+    $wBreak: null,
+    $wSpacing: null,
+    $select: null
+) {
+    text-align: $align;
+    text-transform: $transform;
+    text-decoration: $decoration;
+    text-justify: $justify;
+    text-overflow: $overflow;
+    text-indent: $indent;
+    text-shadow: $shadow;
+    color: $color;
+    font-size: $size;
+    font-style: $style;
+    font-family: $font;
+    font-weight: $weight;
+    line-height: $lnHeight;
+    letter-spacing: $lnSpacing;
+    white-space: $whSpace;
+    word-break: $wBreak;
+    word-spacing: $wSpacing;
+}

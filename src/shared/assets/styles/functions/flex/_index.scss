@@ -1,0 +1,81 @@
+@import './variables';
+@function getJustify($arg) {
+    $justify: (
+        'sa': space-around,
+        'sb': space-between,
+        'se': space-evenly,
+        'c': center,
+        'fs': flex-start,
+        'fe': flex-end,
+    );
+
+    @each $key, $value in $justify {
+        @if ($key == $arg) {
+            @return $value;
+        }
+    }
+}
+
+//Get the value for align-items
+@function getAlign($arg) {
+    @debug $arg;
+    $align: (
+        'b': baseline,
+        's': stretch,
+        'c': center,
+        'fs': flex-start,
+        'fe': flex-end,
+    );
+
+    @each $key, $value in $align {
+        @if ($key == $arg) {
+            @return $value;
+        }
+    }
+}
+
+@mixin flex(
+    $bs: null,
+    $dr: null,
+    $fl: null,
+    $gr: null,
+    $sh: null,
+    $wr: null,
+    $o: null,
+    $jc: null,
+    $ai: null,
+    $as: null,
+    $ac: null,
+    $fx: null
+) {
+    @include cross-d-flex();
+    @include cross-flex-basis($bs);
+
+    @if $dr != null {
+        @include cross-flex-direction(map-get($direction, $dr));
+    }
+
+    @include cross-flex-flow($fl);
+    @include cross-flex-grow($gr);
+    @include cross-flex-shrink($sh);
+
+    @if $wr != null {
+        @include cross-flex-wrap(map-get($wrap, $wr));
+    }
+
+    @if $o != null {
+        @include cross-order($o);
+    }
+
+    @if $ai != null {
+        @include cross-align-items(map-get($align, $ai));
+    }
+
+    @include cross-vflex($fx);
+    @include cross-align-content(map-get($justify, $ac));
+    @include cross-align-self(map-get($align, $as));
+
+    @if $jc != null {
+        @include cross-justify-content(map-get($justify, $jc));
+    }
+}

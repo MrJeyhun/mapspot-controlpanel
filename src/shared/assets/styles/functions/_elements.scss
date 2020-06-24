@@ -1,0 +1,166 @@
+// @import './variables', '../../functions/toRem', '../position', '../square', '../background', '../display',
+//     '../cross/index';
+
+// @import '../variables', './rem';
+
+@mixin el(
+    $p: null,
+    $pt: null,
+    $pb: null,
+    $pl: null,
+    $pr: null,
+    $m: null,
+    $mt: null,
+    $mb: null,
+    $ml: null,
+    $mr: null,
+    $w: null,
+    $w-min: null,
+    $w-max: null,
+    $h: null,
+    $h-min: null,
+    $h-max: null,
+    $o-position: null,
+    $color: null,
+    $bgColor: null,
+    $bgImage: null,
+    $bg: null,
+    $backface: null,
+    $weight: null,
+    $ln-height: null,
+    $ln-and-height: null,
+    $b: null,
+    $bt: null,
+    $bb: null,
+    $bl: null,
+    $br: null,
+    $top: null,
+    $bottom: null,
+    $left: null,
+    $right: null,
+    $shadow: null,
+    $letter-sps: null,
+    $word-sps: null,
+    $opy: null,
+    $outln: null,
+    $ord: null,
+    $index: null,
+    $indent: null,
+    $radius: null,
+    $radius-tr: null,
+    $radius-tl: null,
+    $radius-br: null,
+    $radius-bl: null,
+    $style: null,
+    $overflow: null,
+    $float: null,
+    $resize: null,
+    $crs: null,
+    $pointer: null,
+    $filter: null,
+    $animated-border-bottom: null,
+    $rotate: null,
+    $transform: null,
+    $scale: null,
+    $transition: null,
+    $animation: null,
+    $fixed: null,
+    $relative: null,
+    $absolute: null,
+    $square: null,
+    $line-and-height: null,
+    $linear-background: null,
+    $linear-percent-background: null,
+    $fadeIn: null,
+    $objectFit: null,
+    $dsp: null,
+    $vsb: null,
+    $transition: null,
+    $align: null
+) {
+    padding: $p;
+    padding-top: $pt;
+    padding-bottom: $pb;
+    padding-left: $pl;
+    padding-right: $pr;
+    margin: $m;
+    margin-top: $mt;
+    margin-bottom: $mb;
+    margin-left: $ml;
+    margin-right: $mr;
+    border: $b;
+    border-top: $bt;
+    border-bottom: $bb;
+    border-left: $bl;
+    border-right: $br;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    width: $w;
+    min-width: $w-min;
+    max-width: $w-max;
+    height: $h;
+    min-height: $h-min;
+    max-height: $h-max;
+    object-position: $o-position;
+    color: $color;
+    background: $bg;
+    background-color: $bgColor;
+    background-image: $bgImage;
+    backface-visibility: $backface;
+    border-radius: $radius;
+    border-top-right-radius: $radius-tr;
+    border-top-left-radius: $radius-tl;
+    border-bottom-right-radius: $radius-br;
+    border-bottom-left-radius: $radius-bl;
+    box-shadow: $shadow;
+    opacity: $opy;
+    outline: $outln;
+    order: $ord;
+    z-index: $index;
+    list-style: $style;
+    overflow: $overflow;
+    float: $float;
+    resize: $resize;
+    cursor: $crs;
+    pointer-events: $pointer;
+    visibility: $vsb;
+    vertical-align: $align;
+    display: $dsp;
+
+    // /* call mixin function */
+
+    // @if ($filter != null) {
+    //     @include filter($filter);
+    // }
+
+    // @if ($animated-border-bottom) {
+    //     @include animated-border-bottom($animated-border-bottom);
+    // }
+
+    // @if ($fixed != null) {
+    //     @include fixed($fixed...);
+    // }
+
+    // @if ($relative != null) {
+    //     @include relative($relative...);
+    // }
+
+    // @if ($absolute != null) {
+    //     @include absolute($absolute...);
+    // }
+
+    // @include rotate($rotate);
+    // @include transform($transform);
+    // @include scale($scale);
+    // @include transition($transition);
+    // @include animation($animation);
+    // @include square($square);
+    // @include line-and-height($line-and-height);
+    // @include linear-background($linear-background...);
+    // @include linear-percent-background($linear-percent-background...);
+    // @include fadeIn($fadeIn);
+    // @include object-fit($objectFit);
+    // @include display(map-get($display, $dsp));
+}

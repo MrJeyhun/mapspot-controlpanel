@@ -1,0 +1,32 @@
+@import './styleHelpers/index.scss';
+
+.grid-table {
+    display: grid;
+}
+.grid-table .row {
+    display: grid;
+}
+
+.grid-table .cell {
+    padding: 1rem;
+
+    @media (max-width: 800px) {
+        //headers
+        &:before {
+            content: attr(data-title);
+            display: block;
+        }
+        // first header/cell
+        &:first-child {
+            grid-column-start: 1;
+            grid-column-end: 2; // to span all, for long first column use  1 - and last fr
+        }
+    }
+
+    @media (max-width: 400px) {
+        &:last-child {
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+// @font-face {
+//     font-family: 'TT_Interphases_Bold';
+//     src: url('../fonts/TTInterphases-Bold.eot');
+//     src: url('../fonts/TTInterphases-Bold.eot') format('embedded-opentype'),
+//         url('../fonts/TTInterphases-Bold.woff2') format('woff2'), url('../fonts/TTInterphases-Bold.woff') format('woff'),
+//         url('../fonts/TTInterphases-Bold.ttf') format('truetype'),
+//         url('../fonts/TTInterphases-Bold.svg#TTInterphases-Bold') format('svg');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'TT_Interphases_Regular';
+//     src: url('../fonts/TTInterphases-Regular.eot');
+//     src: url('../fonts/TTInterphases-Regular.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/TTInterphases-Regular.woff2') format('woff2'),
+//         url('../fonts/TTInterphases-Regular.woff') format('woff'),
+//         url('../fonts/TTInterphases-Regular.ttf') format('truetype'),
+//         url('../fonts/TTInterphases-Regular.svg#TTInterphases-Regular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'TT_Interphases_DemiBold';
+//     src: url('../fonts/TTInterphases-DemiBold.eot');
+//     src: url('../fonts/TTInterphases-DemiBold.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/TTInterphases-DemiBold.woff2') format('woff2'),
+//         url('../fonts/TTInterphases-DemiBold.woff') format('woff'),
+//         url('../fonts/TTInterphases-DemiBold.ttf') format('truetype'),
+//         url('../fonts/TTInterphases-DemiBold.svg#TTInterphases-DemiBold') format('svg');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'TT_Interphases_Light';
+//     src: url('../fonts/TTInterphasesLight.eot');
+//     src: url('../fonts/TTInterphasesLight.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/TTInterphasesLight.woff2') format('woff2'), url('../fonts/TTInterphasesLight.woff') format('woff'),
+//         url('../fonts/TTInterphasesLight.ttf') format('truetype'),
+//         url('../fonts/TTInterphasesLight.svg#TTInterphasesLight') format('svg');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+/* poppins-300 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Poppins Light'), local('Poppins-Light'), url('./fonts/poppins-latin-300.woff2') format('woff2');
+    font-display: swap;
+}
+/* poppins-500 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Poppins Medium'), local('Poppins-Medium'), url('./fonts/poppins-latin-500.woff2') format('woff2');
+    font-display: swap;
+}

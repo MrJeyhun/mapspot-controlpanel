@@ -1,0 +1,57 @@
+@import 'shared/assets/styles/main.scss';
+
+.grid-container {
+    // @include el($bg: $linerBackground);
+    @include el($bg: #e9e7f1);
+
+    height: 100vh;
+    // padding: 1.3% 6%; // more padding
+    // padding: 1% 3%; // less padding
+    // padding: 0.5% 1.5%; // less padding
+    // padding: 1% 2%; // pwa padding
+}
+
+.app {
+    @include el($h: 100%, $bg: $white, $shadow: 0 0 rem(30px) rgba(67, 14, 136, 0.08));
+    display: grid;
+    grid-template-columns: 0.2fr 2.1fr 0.7fr;
+    gap: 0 0;
+    grid-template-areas: 'left-side center right-side';
+    grid-area: app;
+    // max-height: 100vh;
+    // overflow: hidden;
+}
+
+.left-side {
+    @include el($bg: $white, $radius-tl: $radiusLayout, $radius-bl: $radiusLayout);
+    grid-area: left-side;
+    display: flex;
+    // flex-direction: row;
+    justify-content: space-between;
+}
+
+.center {
+    @include el($h: 100%);
+    grid-area: center;
+    display: flex;
+}
+
+.right-side {
+    @include el($bg: $rightSideColorLayout, $radius-tr: $radiusLayout, $radius-br: $radiusLayout);
+    grid-area: right-side;
+    display: flex;
+}
+
+// will be deletedFIXME:
+.grid-table {
+    width: 100%;
+    margin: rem(20px);
+    height: max-content;
+    .row:first-child {
+        background: #fff !important;
+        line-height: 2;
+    }
+    .row {
+        margin: 0 !important;
+    }
+}
