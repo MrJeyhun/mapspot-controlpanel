@@ -1,2 +1,1 @@
-Control Panel Boilerplate
-See changelog.md
+Control panel for MapSpot project
