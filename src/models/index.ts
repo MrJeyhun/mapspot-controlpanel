@@ -1,18 +1,40 @@
 import { EUser } from 'components/UsersTable/ducks/types';
-
+import { IRootStateCombinedReducer } from 'store/combinedReducer';
 // IUser
-export interface IUserState {
+
+export interface IUser {
     id: string;
-    title: string;
+    name: string;
     date: string;
-    data: string;
-    edit: string;
+    email: string;
+    phone: string;
     status: string;
+    totaltasks: number;
 }
 
-interface ISelectUser {
+export interface IUsers {
+    byId: { [key: string]: IUser };
+    allIds: string[];
+    selectedUserId: string;
+}
+
+export interface IUserSlected {
     type: EUser;
-    payload: IUserState;
+    payload: string;
 }
 
-export interface IUserActions extends ISelectUser {} // to give reducer's action
+// saga models
+
+export interface IDataRequested {
+    type: EUser;
+}
+export interface IUsersDataReceived {
+    type: EUser;
+    payload: {
+        byId: { [key: string]: IUser };
+        allIds: string[];
+    };
+}
+
+// export interface IUserActions extends ISelectUser {} // to give reducer's action
+export interface IRootState extends IRootStateCombinedReducer {}

@@ -1,9 +1,15 @@
-import { IUserActions, IUserState } from 'models';
+import { IUserSlected, IDataRequested } from 'models';
 import { EUser } from './types';
 
-export const userSelected = (userData: IUserState): IUserActions => {
+export const userSelected = (id: string): IUserSlected => {
     return {
         type: EUser.USERSELECTED,
-        payload: userData,
+        payload: id,
+    };
+};
+
+export const usersDataRequested = (): IDataRequested => {
+    return {
+        type: EUser.USERSDATAREQUESTED,
     };
 };
