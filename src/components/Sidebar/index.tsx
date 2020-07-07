@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Block from 'shared/components/Block';
 
 //svg icons
-import { FilterIcon, DashboardIcon, PinIcon, profilePhoto } from './icons';
+import { DashboardIcon, PinIcon, UsersIcon, profilePhoto } from './icons';
 
 import './index.scss';
 
@@ -22,9 +22,9 @@ const Sidebar = () => {
                             <DashboardIcon />
                         </Block>
                     </Link>
-                    <Link to="/filter" title="filter">
-                        <Block className={pathname === '/filter' ? 'icon active' : 'icon'}>
-                            <FilterIcon />
+                    <Link to="/usertable" title="usertable">
+                        <Block className={pathname === '/usertable' ? 'icon active' : 'icon'}>
+                            <UsersIcon />
                         </Block>
                     </Link>
 
@@ -35,8 +35,8 @@ const Sidebar = () => {
             </Block>
             <Block className="sidebar__column">
                 <Block className="sidebar__icon-group ig-3x">
-                    <Link to="/" title="pin">
-                        <Block className={pathname === '/usertable' ? 'icon active' : 'icon'}>
+                    <Link to="/maps" title="maps">
+                        <Block className={pathname === '/maps' ? 'icon active' : 'icon'}>
                             <PinIcon />
                         </Block>
                     </Link>

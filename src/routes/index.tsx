@@ -10,12 +10,14 @@ const NotFound = React.lazy(() => import('shared/components/NotFound'));
 //right-side components
 const OtherPanel = React.lazy(() => import('components/RightSide/OtherPanel'));
 const TablePanel = React.lazy(() => import('components/RightSide/TablePanel'));
+const HereMaps = React.lazy(() => import('components/HereMaps'));
 
 export const CenterRoutes: JSX.Element = (
     <Suspense fallback={<Loader />}>
         <Routes>
             <Navigate to={PATHS.USERTABLE} />
             <Route path={PATHS.USERTABLE} element={<UsersTable />} />
+            <Route path={PATHS.MAPS} element={<HereMaps />} />
             <Route path={PATHS.FILTER} element={<>This is filter</>} />
             <Route path="/*" element={<NotFound />} />
         </Routes>
