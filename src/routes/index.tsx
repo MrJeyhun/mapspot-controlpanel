@@ -6,11 +6,12 @@ import { PATHS } from './paths';
 //center components
 const UsersTable = React.lazy(() => import('components/UsersTable'));
 const NotFound = React.lazy(() => import('shared/components/NotFound'));
+const HereMaps = React.lazy(() => import('components/HereMaps'));
 
 //right-side components
 const OtherPanel = React.lazy(() => import('components/RightSide/OtherPanel'));
 const TablePanel = React.lazy(() => import('components/RightSide/TablePanel'));
-const HereMaps = React.lazy(() => import('components/HereMaps'));
+const MapPanel = React.lazy(() => import('components/RightSide/MapPanel'));
 
 export const CenterRoutes: JSX.Element = (
     <Suspense fallback={<Loader />}>
@@ -28,7 +29,7 @@ export const RightRoutes: JSX.Element = (
     <Suspense fallback={<Loader />}>
         <Routes>
             <Route path={PATHS.USERTABLE} element={<TablePanel />} />
-            <Route path={PATHS.FILTER} />
+            <Route path={PATHS.MAPS} element={<MapPanel />} />
             <Route path="/*" element={<OtherPanel />} />
         </Routes>
     </Suspense>

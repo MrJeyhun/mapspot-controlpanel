@@ -1,0 +1,7 @@
+@import 'shared/assets/styles/main.scss';
+
+.map-panel {
+    @include el($w: 100%, $h: 100%);
+    @include flex($jc: center, $ai: center);
+    @include text($font: Poppins);
+}
