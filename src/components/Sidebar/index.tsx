@@ -17,8 +17,8 @@ const Sidebar = () => {
                     <Block>
                         <Block className="brand">S</Block>
                     </Block>
-                    <Link to="/notFound" title="dashboard">
-                        <Block className={pathname === '/notFound' ? 'icon active' : 'icon'}>
+                    <Link to="/statistics" title="dashboard">
+                        <Block className={pathname === '/statistics' ? 'icon active' : 'icon'}>
                             <DashboardIcon />
                         </Block>
                     </Link>

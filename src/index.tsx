@@ -8,7 +8,7 @@ import App from './views/App';
 import whyDidYouRender from 'shared/utils/whyDidYouRender';
 import './index.scss';
 
-whyDidYouRender();
+// whyDidYouRender();
 
 ReactDOM.render(
     <Provider store={store}>
