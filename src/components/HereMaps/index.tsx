@@ -2,38 +2,18 @@ import React, { useLayoutEffect, useState, useEffect } from 'react';
 import socketIOClient from 'socket.io-client';
 import './index.scss';
 import { CarIcon } from './icons';
-import { Socket } from 'dgram';
 //prettier-ignore
 //TODO: Multiple map types
 
 //socket endpoint
-const ENDPOINT = "http://127.0.0.1:4001";
+// const ENDPOINT = "http://127.0.0.1:4001";
+const ENDPOINT = "https://09c8525c2314.ngrok.io";
 
 const HereMaps = () => {
-    // connect socket
     useEffect(() => {
-        console.log('hahaha');
-        const socket = socketIOClient(ENDPOINT);
         handleConnect();
-        // @ts-ignore
-        socket.on('locationApi', data => {
-            console.log('datafromSocket', data);
-        });
-
-        socket.on('connection', (socket: Socket) => {
-            console.log('New client connected');
-
-            socket.on('disconnect', () => {
-                console.log('Client disconnected');
-            });
-        });
     }, []);
 
-    const handleDisconnect = () => {
-        const socket = socketIOClient(ENDPOINT);
-        console.log('disconnected');
-        socket.disconnect();
-    };
     const handleConnect = () => {
         const socket = socketIOClient(ENDPOINT);
         socket.connect();
@@ -41,7 +21,9 @@ const HereMaps = () => {
 
     // Create a reference to the HTML element we want to put the map on
     const mapRef = React.useRef(null);
-    const [long, setLong] = useState(49.8801);
+
+    //create socket client
+    const socket = socketIOClient(ENDPOINT);
 
     useLayoutEffect(() => {
         if (!mapRef.current) return;
@@ -52,25 +34,21 @@ const HereMaps = () => {
         });
         const defaultLayers = platform.createDefaultLayers();
         const layers = platform.createDefaultLayers();
-        const hMap = new H.Map(mapRef.current, layers.raster.normal.transit, {
-            center: { lat: 40.4093, lng: long },
-            zoom: 12,
+        const hMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
+            center: { lat: 40.4093, lng: 49.8671 },
+            zoom: 16,
             pixelRatio: window.devicePixelRatio || 1,
         });
 
-        const icon = new H.map.Icon(CarIcon),
-            coords = { lat: 40.4015, lng: long },
-            marker = new H.map.Marker(coords, { icon: icon });
-        setInterval(() => {
-            const date = new Date();
+        const icon = new H.map.Icon(CarIcon);
+        const marker = new H.map.Marker({ lat: 0, lng: 0 }, { icon: icon });
+        // @ts-ignore
+        socket.on('locationApi', data => {
+            marker.setGeometry({ lat: data.latitude, lng: data.longitude });
+            // hMap.setCenter({ lat: data.latitude, lng: data.longitude });
+        });
 
-            const sec = date.getSeconds();
-
-            marker.setGeometry({ lat: 40.4015 + sec / 30000, lng: long + sec / 30000 });
-            // hMap.setCenter({lat: 40.4015 + sec/80000, lng: long + sec/80000});
-        }, 1000);
         hMap.addObject(marker);
-        hMap.setCenter(coords);
 
         // MapEvents enables the event system
         // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
