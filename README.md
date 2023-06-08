@@ -1,1 +1,1 @@
-Control panel for MapSpot project
+Mapspot Control Panel project boilerplate
